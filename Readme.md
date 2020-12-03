@@ -84,7 +84,7 @@ helped to organise the content visually.
 
 Wireframes are located here:
 
-<https://github.com/Tia112/Tia112-Milestone-Project-1---Master/tree/master/wireframes>
+https://github.com/Tia112/Interactive-Frontend-Project/tree/master/Wireframes
 
 **Technologies Used**
 
