@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attiya Riaz | Jungle Sounds </title>
-</head>
-<body>
-    <main>
-        <section>
-            <div class="top-container">
-                <!-- Picture tag to load alternative image on 5k screen  -->
-                        <picture>
-                            <!-- source srcset="images/bk_top.png" media="(min-width: 5000px)" -->
-                            <img class="background_img_top" src="images/bk_top.png" alt="top-img">
-                        </picture>
-
-</div>
-        <div class="middle-container">
-        <h1><id="title">Sounds of the Jungle</h1>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Attiya Riaz | Sounds of the Jungle</title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+      <!-- CSS Stylesheets -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <!-- Bootstrap Scripts -->
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   </head>
+   <body id="home">
+      <main>
+         <section>
+            <div class="bk_top">
+               <img class ="header-img" src="images/bk_top.jpg" alt="Jungle Scenery">
             </div>
-        </div>  
-
-        <div class="cards">
-        <div class="button-wrapper">
-        
-        <button class="L animal">L<span style="color:black">ion</span></button>
-        
-        
-
-
-        <script src="index.js" charset="utf-8 "></script>
-        
-        </section>
-
-    <footer>
-        
-        <div class="bottom-container">
-            <h2>Press the RED letter to hear the sounds</h2>
-            <img class="background_img" src="images/bk_btm.png" alt="bk-img">
-            <p class="copyright">© 2020 Attiya Riaz</span>
-    </footer>
-    </div>
-</body>
+            <!-- W3 snippet -->
+            <div id="mySidenav" class="sidenav">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               <iframe class = "vplay" width="500" height="500" src="https://www.youtube.com/embed/6NIt6ibAD6I"></iframe>
+               <p><strong>Watch these animals LIVE from Africa</strong></p>
+            </div>
+            <div id="myRightNav" class="sidenav">
+               <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()">&times;</a>
+               <!-- Defining element for the PhotoOftheDay API -->   
+               <img src="data:, " id="photoOfTheDay" class="photo" alt="National Geographic Photos">
+               <img src="data:, " id="photoOfTheDay2" class="photo" alt="National Geographic Photos">
+               <p><strong>  Photos of the Day from National Geographic</strong></p>
+            </div>
+            <!--The modal is being defined here in HTML-->
+            <div id="modal" class="modal fade" role='dialog'>
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h4 class="modal-title">Fun Facts!</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="stopSound()">&times;</button>
+                     </div>
+                     <div class="modal-body" id="modal-body">
+                        <div id="inputData"></div>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="stopSound()">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="middle-container">
+               <h1><strong>Sounds of the Jungle</strong></h1>
+               <div id="NavTitle" class="NavTitle"
+                  style="font-size:17px;cursor:pointer" onclick="openNav()">
+                  <img
+                     src="images/television.svg"
+                     alt="tv"
+                     width="22" />  Click here for Jungle TV
+               </div>
+               <div id="rightNav" class="NavTitle"
+                  style="font-size:17px;cursor:pointer" onclick="openRightNav()">
+                  <img
+                     src="images/television.svg"
+                     alt="tv"
+                     width="22" />  Click here for Photos of the Day
+               </div>
+               <p></p>
+               <button type="button" class="L animal btn-info btn-lg" onclick="openModal('L')">L<span style="color:black">ion</span></button>
+               <button type="button" class="E animal btn-info btn-lg" onclick="openModal('E')">E<span style="color:black">lephant</span></button>
+               <button type="button" class="F animal btn-info btn-lg" onclick="openModal('F')">F<span style="color:black">rog</span></button>
+               <button type="button" class="B animal btn-info btn-lg" onclick="openModal('B')">B<span style="color:black">ear</span></button>
+               <button type="button" class="M animal btn-info btn-lg" onclick="openModal('M')">M<span style="color:black">onkey</span></button>
+               <button type="button" class="H animal btn-info btn-lg" onclick="openModal('H')">H<span style="color:black">ippo</span></button>
+            </div>
+            <div class="bottom-container">
+               <h2>Press the RED letter on the keyboard to hear the sounds</h2>
+               <h2>Click on the Image to get some Fun Facts!</h2>
+            </div>
+            <div class="bk_top">
+               <img class ="footer-img" src="images/bk_btm.jpg" alt="Jungle Scenery">
+            </div>
+            <p class="copyright">
+               © Attiya Riaz 2020 
+               <script src="js/index.js"></script>
+         </section>
+      </main>
+   </body>
 </html>
